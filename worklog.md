@@ -6,3 +6,6 @@ Will be installing Mojave on a ASUS VivoBook 15 R512FL i5-8265/20GB/512 MX250 (R
 For SMBIOS I probably should start with MacBookPro15,2 because it has 2.3-3.8 GHz Core i5 (I5-8259U), but MacBookPro15,4 has 1.4-3.9 GHz Core i5 (I5-8257U) which matches speeds better. There are also MacBookAir8,1 and MacBookAir8,2 with 1.6-3.6 GHz Core i5 (I5-8210Y) but this is Amber Lake so don't think it fits.
 
 As base use RehabMan's config_UHD630.plist.
+
+# 21-12-2019
+Will start with SMBIOS 15,4.

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>This file is for 10.14.x with native CoffeeLake support</string>
+	<string>ASUS VivoBook 15 R512FL (BQ083); i5-8265U; UHD 620; GeForce MX250 (disabled); 20GB DDR4 single-stick; 512GB SSD M2 PCIe; based on RehabMan's config</string>
 	<key>ACPI</key>
 	<dict>
 		<key>AutoMerge</key>
@@ -180,7 +180,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 nv_disable=1 -disablegfxfirmware -cdfon -igfxnohdmi</string>
+		<string>dart=0 nv_disable=1 -disablegfxfirmware -cdfon -igfxnohdmi -wegnoegpu</string>
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
@@ -509,10 +509,54 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
+		<key>BiosReleaseDate</key>
+		<string>11/08/2019</string>
+		<key>BiosVendor</key>
+		<string>Apple Inc.</string>
+		<key>BiosVersion</key>
+		<string>MBP154.88Z.F000.B00.1911080307</string>
+		<key>Board-ID</key>
+		<string>Mac-53FDB3D8DB8CA971</string>
+		<key>BoardManufacturer</key>
+		<string>Apple Inc.</string>
+		<key>BoardSerialNumber</key>
+		<string>FVF908104QX0000JA</string>
+		<key>BoardType</key>
+		<integer>10</integer>
+		<key>BoardVersion</key>
+		<string>1.0</string>
+		<key>ChassisAssetTag</key>
+		<string>MacBook-Aluminum</string>
+		<key>ChassisManufacturer</key>
+		<string>Apple Inc.</string>
+		<key>ChassisType</key>
+		<string>0x09</string>
+		<key>EfiVersion</key>
+		<string>1037.60.55.0.0</string>
+		<key>Family</key>
+		<string>MacBook Pro</string>
+		<key>FirmwareFeatures</key>
+		<string>0xFC0FE137</string>
+		<key>FirmwareFeaturesMask</key>
+		<string>0xFF1FFF3F</string>
+		<key>LocationInChassis</key>
+		<string>Part Component</string>
+		<key>Manufacturer</key>
+		<string>Apple Inc.</string>
+		<key>Mobile</key>
+		<true/>
+		<key>PlatformFeature</key>
+		<string>0x02</string>
 		<key>ProductName</key>
-		<string>MacBookPro15,2</string>
+		<string>MacBookPro15,4</string>
+		<key>SerialNumber</key>
+		<string>FVFY90RYL40Y</string>
+		<key>SmUUID</key>
+		<string>D9026A12-FDB9-4ACD-93F9-8D388F7B0A4E</string>
 		<key>Trust</key>
 		<true/>
+		<key>Version</key>
+		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
