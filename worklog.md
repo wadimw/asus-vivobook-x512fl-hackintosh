@@ -8,4 +8,18 @@ For SMBIOS I probably should start with MacBookPro15,2 because it has 2.3-3.8 GH
 As base use RehabMan's config_UHD630.plist.
 
 # 21-12-2019
-Will start with SMBIOS 15,4.
+Will start with SMBIOS 15,4. Installed default kexts:
+* AppleALC.kext
+* Lilu.kext
+* NoTouchID.kext
+* USBInjectAll.kext
+* VirtualSMC.kext
+* VoodooPS2Controller.kext
+* WhateverGreen.kext
+used drivers:
+* VirtualSmc.efi
+* HFSPlus.efi
+* AptioMemoryFix.efi
+* ApfsDriverLoader.efi
+Added ACPI patch to get past apfs_module_start:1393. With this I am able to boot into installer.
+To prevent issues with App Store I will also add NullEthernet before installation.

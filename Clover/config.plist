@@ -145,6 +145,16 @@
 					<key>Replace</key>
 					<data>SUdQVQhfQURSDAAAAgA=</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Fix stuck at apfs_module_start:1393</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>oAqTU1RBUwE=</data>
+					<key>Replace</key>
+					<data>oAqRCv8L//8=</data>
+				</dict>
 			</array>
 		</dict>
 		<key>DropTables</key>
@@ -180,7 +190,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 nv_disable=1 -disablegfxfirmware -cdfon -igfxnohdmi -wegnoegpu</string>
+		<string>dart=0 nv_disable=1 -disablegfxfirmware -cdfon -igfxnohdmi -wegnoegpu -v debug=0x100 keepsyms=1</string>
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
