@@ -33,3 +33,6 @@ After many back and forth I was able to complete the install changing SMBIOS to 
 I've had many problems with such config including: non-working graphics acceleration, terrible performance, freezes at random moments at boot logo (after verbose log), graphics freezes when windows appear (halfway through), inability to shut down, reboot etc. I have also found out that there is no way to enable XHCI Handoff in this laptop's BIOS so idk if it is enabled.
 
 With this complete EFI https://www.tonymacx86.com/threads/mojave-10-14-6-on-asus-vivobook-s532fa.284231/post-2011381 I was able to boot into Mojave with apparently working graphics acceleration and good performance. I will now try to transfer these settings onto a new config piece by piece.
+
+PROGRESS: to successfully boot into GPU-enabled gui I need
+* VoodooTSCSync.kext
