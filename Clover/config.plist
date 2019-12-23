@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>ASUS VivoBook 15 X512FL (BQ083); i5-8265U; UHD 620; GeForce MX250 (disabled); 20GB DDR4 single-stick; 512GB SSD M2 PCIe; based on RehabMan's config</string>
+	<string>ASUS VivoBook 15 X512FL (BQ083); i5-8265U; UHD 620; GeForce MX250 (disabled); 20GB DDR4 single-stick; 512GB SSD M2 PCIe</string>
 	<key>ACPI</key>
 	<dict>
 		<key>AutoMerge</key>
@@ -24,16 +24,16 @@
 			<false/>
 			<key>Fixes</key>
 			<dict>
-				<key>Comment-IRQ Fix</key>
-				<string>The following fixes may be needed for onboard audio/USB/etc</string>
 				<key>FixTMR</key>
-				<false/>
+				<true/>
 				<key>FixRTC</key>
-				<false/>
+				<true/>
 				<key>FixIPIC</key>
-				<false/>
+				<true/>
 				<key>FixHPET</key>
-				<false/>
+				<true/>
+				<key>FixMutex</key>
+				<true/>
 			</dict>
 			<key>Patches</key>
 			<array>
@@ -68,8 +68,6 @@
 		</array>
 		<key>SSDT</key>
 		<dict>
-			<key>DropOem</key>
-			<false/>
 			<key>Generate</key>
 			<dict>
 				<key>PluginType</key>
@@ -293,37 +291,15 @@
 	<key>DisableDrivers</key>
 	<array>
 		<string>VBoxHfs</string>
+		<string>SMCHelper</string>
 	</array>
 	<key>GUI</key>
 	<dict>
-		<key>Custom</key>
-		<dict>
-			<key>Entries</key>
-			<array>
-				<dict>
-					<key>Hidden</key>
-					<false/>
-					<key>Type</key>
-					<string>OSXRecovery</string>
-				</dict>
-				<dict>
-					<key>Type</key>
-					<string>Windows</string>
-					<key>Title</key>
-					<string>Windows</string>
-				</dict>
-			</array>
-		</dict>
 		<key>Hide</key>
 		<array>
 			<string>Preboot</string>
 			<string>Recovery</string>
 		</array>
-		<key>Mouse</key>
-		<dict>
-			<key>Enabled</key>
-			<false/>
-		</dict>
 		<key>Scan</key>
 		<dict>
 			<key>Entries</key>
@@ -335,18 +311,13 @@
 			<key>Tool</key>
 			<true/>
 		</dict>
-		<key>ScreenResolution</key>
+		<key>#ScreenResolution</key>
 		<string>1920x1080</string>
 		<key>Theme</key>
 		<string>BGM</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
-		<key>#EDID</key>
-		<dict>
-			<key>Inject</key>
-			<false/>
-		</dict>
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
@@ -370,6 +341,7 @@
 		<key>ForceKextsToLoad</key>
 		<array>
 			<string>\System\Library\Extensions\IONetworkingFamily.kext</string>
+			<string>\System\Library\Extensions\IOGraphicsFamily.kext</string>
 		</array>
 		<key>KextsToPatch</key>
 		<array/>

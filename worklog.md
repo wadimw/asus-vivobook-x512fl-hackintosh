@@ -36,3 +36,4 @@ With this complete EFI https://www.tonymacx86.com/threads/mojave-10-14-6-on-asus
 
 PROGRESS: to successfully boot into GPU-enabled gui I need
 * VoodooTSCSync.kext
+To prevent Framebuffer kext panic I need at leas some of the fixes from ACPI/DSDT/FIxes and force loading IOGraphicsFamily.kext. It apparently works for any SMBIOS but 15,4 gave me worse performance than 15,2 so I'll stick to the latter. Current config boots fine while being stripped from most unneeded entries, Hackintool shows QE/CI enabled, shutdown also works.
