@@ -39,3 +39,5 @@ PROGRESS: to successfully boot into GPU-enabled gui I need
 To prevent Framebuffer kext panic I need at leas some of the fixes from ACPI/DSDT/FIxes and force loading IOGraphicsFamily.kext. It apparently works for any SMBIOS but 15,4 gave me worse performance than 15,2 so I'll stick to the latter. Current config boots fine while being stripped from most unneeded entries, Hackintool shows QE/CI enabled, shutdown also works.
 
 With layout-id 21 everything works, including combojack headphones and mic.
+
+Now for the touchpad. It is VoodooI2C ELAN. Placed under \\\_SB\_.PCIO.I2C1.ETPD. APIC pin 0x6d.
