@@ -40,4 +40,8 @@ To prevent Framebuffer kext panic I need at leas some of the fixes from ACPI/DSD
 
 With layout-id 21 everything works, including combojack headphones and mic.
 
-Now for the touchpad. It is VoodooI2C ELAN. Placed under \\\_SB\_.PCIO.I2C1.ETPD. APIC pin 0x6d.
+Now for the touchpad. FOllowing https://voodooi2c.github.io/#GPIO%20Pinning/GPIO%20Pinning. It is VoodooI2C ELAN. Placed under \\\_SB\_.PCIO.I2C1.ETPD. APIC pin 0x6D which for CannonPoint-LP is:
+GPP_D13_IRQ -> pin 81 -> GPP_D community CNL_GPP(0, 68(base), 92, 96(gpio_base)) -> gpio_num(81)-base(68)+gpio_base(96)=109 -> hex 0x6D
+or
+GPP_G1_IRQ -> pin 52 -> GPP_G community CNL_GPP(2, 51(base), 58, 64(gpio_base)) -> gpio_num(52)-base(51)+gpio_base(64)=65 -> hex 0x41
+with 0x6D touchpad works.
