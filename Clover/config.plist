@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>ASUS VivoBook 15 R512FL (BQ083); i5-8265U; UHD 620; GeForce MX250 (disabled); 20GB DDR4 single-stick; 512GB SSD M2 PCIe; based on RehabMan's config</string>
+	<string>ASUS VivoBook 15 X512FL (BQ083); i5-8265U; UHD 620; GeForce MX250 (disabled); 20GB DDR4 single-stick; 512GB SSD M2 PCIe; based on RehabMan's config</string>
 	<key>ACPI</key>
 	<dict>
 		<key>AutoMerge</key>
@@ -41,7 +41,7 @@
 					<key>Comment</key>
 					<string>change OSID to XSID (to avoid match against _OSI XOSI patch)</string>
 					<key>Disabled</key>
-					<true/>
+					<false/>
 					<key>Find</key>
 					<data>T1NJRA==</data>
 					<key>Replace</key>
@@ -51,99 +51,11 @@
 					<key>Comment</key>
 					<string>change _OSI to XOSI</string>
 					<key>Disabled</key>
-					<true/>
+					<false/>
 					<key>Find</key>
 					<data>X09TSQ==</data>
 					<key>Replace</key>
 					<data>WE9TSQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change _DSM to XDSM</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>X0RTTQ==</data>
-					<key>Replace</key>
-					<data>WERTTQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change EC0 to EC</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>RUMwXw==</data>
-					<key>Replace</key>
-					<data>RUNfXw==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change H_EC to EC</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>SF9FQw==</data>
-					<key>Replace</key>
-					<data>RUNfXw==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change ECDV to EC</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>RUNEVg==</data>
-					<key>Replace</key>
-					<data>RUNfXw==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change HDAS to HDEF</string>
-					<key>Find</key>
-					<data>SERBUw==</data>
-					<key>Replace</key>
-					<data>SERFRg==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change HECI to IMEI</string>
-					<key>Find</key>
-					<data>SEVDSQ==</data>
-					<key>Replace</key>
-					<data>SU1FSQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change MEI to IMEI</string>
-					<key>Find</key>
-					<data>TUVJXw==</data>
-					<key>Replace</key>
-					<data>SU1FSQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change GFX0 to IGPU</string>
-					<key>Find</key>
-					<data>R0ZYMA==</data>
-					<key>Replace</key>
-					<data>SUdQVQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change PCI0.VID to IGPU #1 (Thinkpad)</string>
-					<key>Find</key>
-					<data>UENJMFZJRF8=</data>
-					<key>Replace</key>
-					<data>UENJMElHUFU=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change PCI0.VID to IGPU #2 (Thinkpad)</string>
-					<key>Find</key>
-					<data>VklEXwhfQURSDAAAAgA=</data>
-					<key>Replace</key>
-					<data>SUdQVQhfQURSDAAAAgA=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -190,7 +102,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 nv_disable=1 -disablegfxfirmware -cdfon -igfxnohdmi -wegnoegpu -v debug=0x100 keepsyms=1</string>
+		<string>dart=0 nv_disable=1 -cdfon -igfxnohdmi -wegnoegpu -v debug=0x100 keepsyms=1</string>
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
@@ -202,171 +114,35 @@
 	</dict>
 	<key>Devices</key>
 	<dict>
-		<key>AddProperties</key>
-		<array>
-			<dict>
-				<key>Device</key>
-				<string>NVidia</string>
-				<key>Key</key>
-				<string>name</string>
-				<key>Value</key>
-				<data>I2Rpc3BsYXkA</data>
-				<key>Comment</key>
-				<string>Inject &quot;name&quot; as (data)&quot;#display&quot; to disable graphics drivers on NVidia</string>
-			</dict>
-			<dict>
-				<key>Device</key>
-				<string>NVidia</string>
-				<key>Key</key>
-				<string>IOName</string>
-				<key>Value</key>
-				<string>#display</string>
-				<key>Comment</key>
-				<string>Inject &quot;IOName&quot; as &quot;#display&quot; to disable graphics drivers on NVidia</string>
-			</dict>
-			<dict>
-				<key>Device</key>
-				<string>NVidia</string>
-				<key>Key</key>
-				<string>class-code</string>
-				<key>Value</key>
-				<data>/////w==</data>
-				<key>Comment</key>
-				<string>Inject bogus class-code to prevent graphics drivers loading for NVidia</string>
-			</dict>
-			<dict>
-				<key>Device</key>
-				<string>ATI</string>
-				<key>Key</key>
-				<string>name</string>
-				<key>Value</key>
-				<data>I2Rpc3BsYXkA</data>
-				<key>Comment</key>
-				<string>Inject &quot;name&quot; as (data)&quot;#display&quot; to disable graphics drivers on AMD</string>
-			</dict>
-			<dict>
-				<key>Device</key>
-				<string>ATI</string>
-				<key>Key</key>
-				<string>IOName</string>
-				<key>Value</key>
-				<string>#display</string>
-				<key>Comment</key>
-				<string>Inject &quot;IOName&quot; as &quot;#display&quot; to disable graphics drivers on AMD</string>
-			</dict>
-			<dict>
-				<key>Device</key>
-				<string>ATI</string>
-				<key>Key</key>
-				<string>class-code</string>
-				<key>Value</key>
-				<data>/////w==</data>
-				<key>Comment</key>
-				<string>Inject bogus class-code to prevent graphics drivers loading for AMD</string>
-			</dict>
-			<dict>
-				<key>Device</key>
-				<string>ATI</string>
-				<key>Key</key>
-				<string>vendor-id</string>
-				<key>Value</key>
-				<data>//8AAA==</data>
-				<key>Comment</key>
-				<string>Inject bogus vendor-id to prevent graphics drivers loading for AMD</string>
-			</dict>
-			<dict>
-				<key>Device</key>
-				<string>ATI</string>
-				<key>Key</key>
-				<string>device-id</string>
-				<key>Value</key>
-				<data>//8AAA==</data>
-				<key>Comment</key>
-				<string>Inject bogus device-id to prevent graphics drivers loading for AMD</string>
-			</dict>
-		</array>
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
-			<integer>0</integer>
-		</dict>
-		<key>FakeID</key>
-		<dict>
-			<key>#Kaby Lake-Comment</key>
-			<string>To avoid automatic Clover fake device-id (Skylake) injection</string>
-			<key>#IntelGFX</key>
-			<string>0x59168086</string>
+			<integer>22</integer>
 		</dict>
 		<key>Properties</key>
 		<dict>
-			<key>PciRoot(0)/Pci(0x02,0)</key>
+			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
-				<data>AACbPg==</data>
-				<key>#hda-gfx</key>
-				<string>onboard-1</string>
-				<key>#AAPL00,override-no-connect</key>
-				<data></data>
-				<key>#AAPL00,override-no-edid</key>
-				<data></data>
-				<key># DVMT-prealloc</key>
-				<string>32MB BIOS, 19MB framebuffer, 9MB cursor bytes (credit RehabMan)</string>
-				<key>framebuffer-patch-enable</key>
-				<integer>1</integer>
-				<key>framebuffer-stolenmem</key>
-				<data>AAAwAQ==</data>
+				<data>
+				CQClPg==
+				</data>
+				<key>device-id</key>
+				<data>
+				pT4AAA==
+				</data>
 				<key>framebuffer-fbmem</key>
-				<data>AACQAA==</data>
-				<key>## @0 LVDS-&gt;DP</key>
-				<string></string>
-				<key>#framebuffer-con0-enable</key>
-				<integer>1</integer>
-				<key>#framebuffer-con0-type</key>
-				<data>AAQAAA==</data>
-				<key>## @1 HDMI</key>
-				<string></string>
-				<key>#framebuffer-con1-enable</key>
-				<integer>1</integer>
-				<key>#framebuffer-con1-type</key>
-				<data>AAgAAA==</data>
-				<key># Note1</key>
-				<string> no HDMI example in CoffeeLake, flags 86090000 seen in CannonLake?</string>
-				<key>#framebuffer-con1-flags</key>
-				<data>hwEAAA==</data>
-				<key>#framebuffer-con1-pipe</key>
-				<data>EgAAAA==</data>
-				<key>## @2 HDMI</key>
-				<string></string>
-				<key>#framebuffer-con2-enable</key>
-				<integer>1</integer>
-				<key>#framebuffer-con2-type</key>
-				<data>AAgAAA==</data>
-				<key>#framebuffer-con2-flags</key>
-				<data>hwEAAA==</data>
-				<key>#framebuffer-con2-pipe</key>
-				<data>EgAAAA==</data>
-				<key>## @3 HDMI</key>
-				<string></string>
-				<key>#framebuffer-con3-enable</key>
-				<integer>1</integer>
-				<key>#framebuffer-con3-type</key>
-				<data>AAgAAA==</data>
-				<key>#framebuffer-con3-flags</key>
-				<data>hwEAAA==</data>
-				<key>#framebuffer-con3-pipe</key>
-				<data>EgAAAA==</data>
-				<key>#2 0204-&gt;0306</key>
-				<string>0x3e9b0000, 0306 instead of 0204, HDMI</string>
-				<key>#2 framebuffer-con2-enable</key>
-				<integer>1</integer>
-				<key>#2 framebuffer-con2-alldata</key>
-				<data>AwYIAAAEAADHAwAA</data>
-				<key>#3 no external</key>
-				<string>0x3e9b0000, eliminate all external ports (0105 and 0204)</string>
-				<key>#3 framebuffer-con1-enable</key>
-				<integer>1</integer>
-				<key>#3 framebuffer-con1-alldata</key>
-				<data>/wAAAAEAAAAgAAAA/wAAAAEAAAAgAAAA</data>
+				<data>
+				AACQAA==
+				</data>
+				<key>framebuffer-patch-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-stolenmem</key>
+				<data>
+				AAAwAQ==
+				</data>
 			</dict>
 			<key>PciRoot(0)/Pci(0x1f,3)</key>
 			<dict>
@@ -448,16 +224,14 @@
 			<key>Inject</key>
 			<false/>
 		</dict>
-		<key>#ig-platform-id</key>
-		<string>0x3e9b0000</string>
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
-			<true/>
+			<false/>
 			<key>Intel</key>
 			<false/>
 			<key>NVidia</key>
-			<true/>
+			<false/>
 		</dict>
 	</dict>
 	<key>KernelAndKextPatches</key>
@@ -488,26 +262,6 @@
 				<key>Replace</key>
 				<data>ILniAAAAkJA=</data>
 			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Disable panic kext logging on 10.13 release kernel (credit vit9696)</string>
-				<key>MatchOS</key>
-				<string>10.13.x</string>
-				<key>Find</key>
-				<data>igKEwHRE</data>
-				<key>Replace</key>
-				<data>igKEwOtE</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Disable panic kext logging on 10.14 release kernel (credit vit9696)</string>
-				<key>MatchOS</key>
-				<string>10.14.x</string>
-				<key>Find</key>
-				<data>igKEwHRC</data>
-				<key>Replace</key>
-				<data>igKEwOtC</data>
-			</dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>
@@ -519,54 +273,10 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
-		<key>BiosReleaseDate</key>
-		<string>11/08/2019</string>
-		<key>BiosVendor</key>
-		<string>Apple Inc.</string>
-		<key>BiosVersion</key>
-		<string>MBP154.88Z.F000.B00.1911080307</string>
-		<key>Board-ID</key>
-		<string>Mac-53FDB3D8DB8CA971</string>
-		<key>BoardManufacturer</key>
-		<string>Apple Inc.</string>
-		<key>BoardSerialNumber</key>
-		<string>FVF908104QX0000JA</string>
-		<key>BoardType</key>
-		<integer>10</integer>
-		<key>BoardVersion</key>
-		<string>1.0</string>
-		<key>ChassisAssetTag</key>
-		<string>MacBook-Aluminum</string>
-		<key>ChassisManufacturer</key>
-		<string>Apple Inc.</string>
-		<key>ChassisType</key>
-		<string>0x09</string>
-		<key>EfiVersion</key>
-		<string>1037.60.55.0.0</string>
-		<key>Family</key>
-		<string>MacBook Pro</string>
-		<key>FirmwareFeatures</key>
-		<string>0xFC0FE137</string>
-		<key>FirmwareFeaturesMask</key>
-		<string>0xFF1FFF3F</string>
-		<key>LocationInChassis</key>
-		<string>Part Component</string>
-		<key>Manufacturer</key>
-		<string>Apple Inc.</string>
-		<key>Mobile</key>
-		<true/>
-		<key>PlatformFeature</key>
-		<string>0x02</string>
 		<key>ProductName</key>
-		<string>MacBookPro15,4</string>
-		<key>SerialNumber</key>
-		<string>FVFY90RYL40Y</string>
-		<key>SmUUID</key>
-		<string>D9026A12-FDB9-4ACD-93F9-8D388F7B0A4E</string>
+		<string>MacBookPro15,2</string>
 		<key>Trust</key>
 		<true/>
-		<key>Version</key>
-		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
