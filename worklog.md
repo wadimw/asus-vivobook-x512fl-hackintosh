@@ -45,3 +45,6 @@ GPP_D13_IRQ -> pin 81 -> GPP_D community CNL_GPP(0, 68(base), 92, 96(gpio_base))
 or
 GPP_G1_IRQ -> pin 52 -> GPP_G community CNL_GPP(2, 51(base), 58, 64(gpio_base)) -> gpio_num(52)-base(51)+gpio_base(64)=65 -> hex 0x41
 with 0x6D touchpad works.
+
+# 24-12-2019
+Backlight control works now, but max brightness was low when using -wegnoegpu (or property). Will have to disable eGPU manually.
