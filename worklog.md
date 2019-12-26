@@ -48,3 +48,6 @@ with 0x6D touchpad works.
 
 # 24-12-2019
 Backlight control works now, but max brightness was low when using -wegnoegpu (or property). Will have to disable eGPU manually.
+
+# 26-12-2019
+By using PNLF ssdt specific for CoffeeLake I can successfully disable dGPU with WhateverGreen and still maintain expected brightness level.

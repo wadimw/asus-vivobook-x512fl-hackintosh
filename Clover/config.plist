@@ -34,8 +34,6 @@
 				<true/>
 				<key>FixMutex</key>
 				<true/>
-				<key>AddPNLF</key>
-				<true/>
 			</dict>
 			<key>Patches</key>
 			<array>
@@ -126,7 +124,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 nv_disable=1 -igfxnohdmi -v debug=0x100 keepsyms=1</string>
+		<string>dart=0 nv_disable=1 -igfxnohdmi -wegnoegpu -v debug=0x100 keepsyms=1</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
@@ -138,10 +136,6 @@
 	</dict>
 	<key>Devices</key>
 	<dict>
-		<key>SetIntelBacklight</key>
-		<true/>
-		<key>SetIntelMaxBacklight</key>
-		<true/>
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
@@ -214,7 +208,7 @@
 		<key>#ScreenResolution</key>
 		<string>1920x1080</string>
 		<key>Theme</key>
-		<string>BGM</string>
+		<string>clover-theme-minimal-dark</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
