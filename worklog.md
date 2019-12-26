@@ -51,3 +51,18 @@ Backlight control works now, but max brightness was low when using -wegnoegpu (o
 
 # 26-12-2019
 By using PNLF ssdt specific for CoffeeLake I can successfully disable dGPU with WhateverGreen and still maintain expected brightness level.
+
+Moving on to create custom UsbInjectAll config.
+USB2:
+01 - right
+02 - USBC via OTG plug
+03 - left far
+04 - left near
+06 - webcam (internal)
+10 - bluetooth (int)
+USB3:
+01 - right
+USB-C with OTG plug not working for some reason
+both left ports are only USB2
+
+Created config, works as expected.
