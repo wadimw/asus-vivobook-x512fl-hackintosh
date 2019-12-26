@@ -91,6 +91,16 @@
 					<key>TgtBridge</key>
 					<data>RVRQRA==</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change KBLU header to XBLU (ASUS WhiskeyLake Keyboard Backlight)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>FCZLQkxVAA==</data>
+					<key>Replace</key>
+					<data>FCZYQkxVAA==</data>
+				</dict>
 			</array>
 		</dict>
 		<key>DropTables</key>
