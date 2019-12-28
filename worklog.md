@@ -68,3 +68,5 @@ both left ports are only USB2
 Created config, works as expected.
 
 To implement keyboard backlight I followed https://github.com/hieplpvip/AsusSMC/wiki/Installation-Instruction but it's done with hotpatch rather than static patch. I coundn't get TgtBridge on EC0 to work so I replaced whole KBLU method header along with its length so it may stop working after BIOS update. I won't be implementing Fn keys however, since in this laptop there is only one key that cycles KB brightness, so instead I'm simply remapping Fn keys with Karabiner. Nicely though keyboard now has much finer brightness control than on Windows.
+
+Apparently sleep works too. Sadly I have to give the laptop back so I won't be doing anything else here, at least for now.

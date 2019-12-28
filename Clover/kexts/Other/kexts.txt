@@ -1,0 +1,1 @@
+AppleALC.kext AsusSMC.kext Lilu.kext NoTouchID.kext NullEthernet.kext SMCBatteryManager.kext SMCProcessor.kext USBInjectAll.kext VirtualSMC.kext VoodooI2C.kext VoodooI2CHID.kext VoodooInput.kext VoodooPS2Controller.kext VoodooTSCSync.kext WhateverGreen.kext
