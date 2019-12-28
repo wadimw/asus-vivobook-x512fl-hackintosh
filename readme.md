@@ -5,9 +5,11 @@ This was done on a tight schedule, but most stuff is ironed out. You may wish to
 
 Everything is done on hotpatches and C/k/O injection so You can enable SIP if You wish. For installation use external mouse bc touchpad doesn't work. 
 
-Remember to regenerate SMBIOS with Clover Configurator (serial etc.), download all latest kexts from their devs and recompile dsls into amls.
+Remember to regenerate SMBIOS (serial etc.) with Clover Configurator or anything (just don't break everything else, best way is to do it on a copy and then paste just SMBIOS section back to original file), download all latest kexts from their devs and recompile dsls into amls.
 
-## Info
+If You want to go Catalina, it will probably suffice to add fake EC (or rename EC0 to EC, but idk if it won't break anything).
+
+## Hardware
 Model: ASUS VivoBook 15 X512FL (R512FL-BQ083), BIOS v303  
 OS: macOS 10.14.6 Mojave
 
@@ -84,3 +86,8 @@ sudo pmset -a autopoweroff 0
 sudo pmset -a powernap 0
 ```
 In Energy Saver disable Power Nap, optionally disable Put hard disks to sleep, Wake for network access.
+
+If You don't want Catalina, best do it before connecting to internet:
+```
+sudo softwareupdate --ignore "macOS Catalina"
+```
