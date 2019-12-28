@@ -9,6 +9,8 @@ Remember to regenerate SMBIOS (serial etc.) with Clover Configurator or anything
 
 If You want to go Catalina, it will probably suffice to add fake EC (or rename EC0 to EC, but idk if it won't break anything).
 
+I gave back this laptop so I probably won't be doing anything else here.
+
 ## Hardware
 Model: ASUS VivoBook 15 X512FL (R512FL-BQ083), BIOS v303  
 OS: macOS 10.14.6 Mojave
